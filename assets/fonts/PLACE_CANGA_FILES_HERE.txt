@@ -1,0 +1,7 @@
+Put your Canga font files in this folder:
+
+- Canga.woff2
+- Canga.woff
+
+The site is already configured in `styles.css` to load them via @font-face.
+
