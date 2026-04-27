@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
     name="description"
     content="PrevenTech is a Saudi-based health technology company delivering preventive healthcare innovation, AI-powered medical solutions, and smart hospital systems."
   />
-  <title>PrevenTech | Smarter Healthcare Solutions</title>
+  <title data-i18n="meta.title">PrevenTech | Smarter Healthcare Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -23,17 +23,22 @@
         <span class="logo-mark">P</span>
         <span>PrevenTech</span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
-        Menu
-      </button>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          العربية
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+          <span data-i18n="nav.menu">Menu</span>
+        </button>
+      </div>
       <nav id="mainNav">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#why-us" data-i18n="nav.why">Why Us</a></li>
+          <li><a href="#solutions" data-i18n="nav.solutions">Solutions</a></li>
+          <li><a href="#impact" data-i18n="nav.impact">Impact</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -43,25 +48,25 @@
     <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="eyebrow">Saudi HealthTech Innovation</p>
-          <h1>Innovative Healthcare Solutions for a Smarter Future</h1>
-          <p class="hero-subtitle">Preventive Care • Smart Health Solutions • Medical Innovation</p>
-          <p>
-            We empower healthcare providers with AI-driven solutions that enhance patient
-            outcomes, optimize operations, and enable proactive healthcare.
+          <p class="eyebrow" data-i18n="hero.eyebrow">Saudi HealthTech Innovation</p>
+          <h1 data-i18n="hero.headline">Innovative Healthcare Solutions for a Smarter Future</h1>
+          <p class="hero-subtitle" data-i18n="hero.subheadline">Preventive Care • Smart Health Solutions • Medical Innovation</p>
+          <p data-i18n="hero.description">
+            We empower healthcare providers with AI-driven solutions that enhance patient outcomes,
+            optimize operations, and enable proactive healthcare.
           </p>
           <div class="hero-actions">
-            <a href="#services" class="btn">Explore Services</a>
-            <a href="#booking" class="btn btn-secondary">Book a Meeting</a>
+            <a href="#services" class="btn" data-i18n="hero.ctaServices">Explore Services</a>
+            <a href="#booking" class="btn btn-secondary" data-i18n="hero.ctaBooking">Book a Meeting</a>
           </div>
         </div>
         <aside class="hero-panel reveal">
-          <h2>Healthcare Built For The Future</h2>
+          <h2 data-i18n="hero.panelTitle">Healthcare Built For The Future</h2>
           <ul>
-            <li><span>Focus</span><strong>Preventive Healthcare</strong></li>
-            <li><span>Technology</span><strong>AI-Powered Solutions</strong></li>
-            <li><span>Market</span><strong>Saudi Healthcare Ecosystem</strong></li>
-            <li><span>Approach</span><strong>Scalable & Sustainable</strong></li>
+            <li><span data-i18n="hero.panel.focusLabel">Focus</span><strong data-i18n="hero.panel.focusValue">Preventive Healthcare</strong></li>
+            <li><span data-i18n="hero.panel.techLabel">Technology</span><strong data-i18n="hero.panel.techValue">AI-Powered Solutions</strong></li>
+            <li><span data-i18n="hero.panel.marketLabel">Market</span><strong data-i18n="hero.panel.marketValue">Saudi Healthcare Ecosystem</strong></li>
+            <li><span data-i18n="hero.panel.approachLabel">Approach</span><strong data-i18n="hero.panel.approachValue">Scalable & Sustainable</strong></li>
           </ul>
         </aside>
       </div>
@@ -70,30 +75,30 @@
     <section id="about" class="section">
       <div class="container reveal">
         <div class="section-head">
-          <p class="eyebrow">About Us</p>
-          <h2>Driving Health Innovation Through Prevention</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">About Us</p>
+          <h2 data-i18n="about.title">Driving Health Innovation Through Prevention</h2>
         </div>
-        <p>
+        <p data-i18n="about.description">
           PrevenTech is a Saudi-based health technology company focused on innovation, prevention,
           and intelligent healthcare systems.
         </p>
         <div class="cards cards-2">
           <article class="card">
-            <h3>Mission</h3>
-            <p>Deliver high-quality healthcare solutions driven by innovation and prevention.</p>
+            <h3 data-i18n="about.missionTitle">Mission</h3>
+            <p data-i18n="about.missionText">Deliver high-quality healthcare solutions driven by innovation and prevention.</p>
           </article>
           <article class="card">
-            <h3>Vision</h3>
-            <p>To be a leader in preventive and sustainable healthcare solutions.</p>
+            <h3 data-i18n="about.visionTitle">Vision</h3>
+            <p data-i18n="about.visionText">To be a leader in preventive and sustainable healthcare solutions.</p>
           </article>
         </div>
         <article class="card values-card">
-          <h3>Core Values</h3>
+          <h3 data-i18n="about.valuesTitle">Core Values</h3>
           <ul class="value-list">
-            <li>Innovation</li>
-            <li>Quality</li>
-            <li>Patient Safety</li>
-            <li>Reliability</li>
+            <li data-i18n="about.values.innovation">Innovation</li>
+            <li data-i18n="about.values.quality">Quality</li>
+            <li data-i18n="about.values.safety">Patient Safety</li>
+            <li data-i18n="about.values.reliability">Reliability</li>
           </ul>
         </article>
       </div>
@@ -102,15 +107,15 @@
     <section id="why-us" class="section section-alt">
       <div class="container reveal">
         <div class="section-head">
-          <p class="eyebrow">Why Choose Us</p>
-          <h2>Reliable Expertise for Real Healthcare Impact</h2>
+          <p class="eyebrow" data-i18n="why.eyebrow">Why Choose Us</p>
+          <h2 data-i18n="why.title">Reliable Expertise for Real Healthcare Impact</h2>
         </div>
         <div class="cards">
-          <article class="card"><h3>Highly experienced team</h3></article>
-          <article class="card"><h3>Saudi-based professionals</h3></article>
-          <article class="card"><h3>High quality & reliability standards</h3></article>
-          <article class="card"><h3>AI-driven healthcare innovation</h3></article>
-          <article class="card"><h3>Scalable and sustainable solutions</h3></article>
+          <article class="card"><h3 data-i18n="why.cards.team">Highly experienced team</h3></article>
+          <article class="card"><h3 data-i18n="why.cards.saudi">Saudi-based professionals</h3></article>
+          <article class="card"><h3 data-i18n="why.cards.quality">High quality & reliability standards</h3></article>
+          <article class="card"><h3 data-i18n="why.cards.ai">AI-driven healthcare innovation</h3></article>
+          <article class="card"><h3 data-i18n="why.cards.scalable">Scalable and sustainable solutions</h3></article>
         </div>
       </div>
     </section>
@@ -118,26 +123,26 @@
     <section id="solutions" class="section">
       <div class="container reveal">
         <div class="section-head">
-          <p class="eyebrow">Our Solutions</p>
-          <h2>Products Built Inside PrevenTech</h2>
+          <p class="eyebrow" data-i18n="solutions.eyebrow">Our Solutions</p>
+          <h2 data-i18n="solutions.title">Products Built Inside PrevenTech</h2>
         </div>
         <div class="cards cards-2">
           <article class="card product-card mointak">
-            <h3>🟢 Mointak (معينتك)</h3>
-            <p class="muted">AI-powered diabetic foot care system</p>
+            <h3 data-i18n="solutions.mointak.title">🟢 Mointak (معينتك)</h3>
+            <p class="muted" data-i18n="solutions.mointak.subtitle">AI-powered diabetic foot care system</p>
             <ul class="feature-list">
-              <li>Uses image analysis to detect risks early</li>
-              <li>Prioritizes patients based on severity</li>
-              <li>Reduces complications and amputations</li>
+              <li data-i18n="solutions.mointak.f1">Uses image analysis to detect risks early</li>
+              <li data-i18n="solutions.mointak.f2">Prioritizes patients based on severity</li>
+              <li data-i18n="solutions.mointak.f3">Reduces complications and amputations</li>
             </ul>
           </article>
           <article class="card product-card healora">
             <h3>🟣 Healora</h3>
-            <p class="muted">AI-powered hospital analytics platform</p>
+            <p class="muted" data-i18n="solutions.healora.subtitle">AI-powered hospital analytics platform</p>
             <ul class="feature-list">
-              <li>Predicts patient flow and discharge timing</li>
-              <li>Optimizes hospital operations</li>
-              <li>Reduces waiting time and improves efficiency</li>
+              <li data-i18n="solutions.healora.f1">Predicts patient flow and discharge timing</li>
+              <li data-i18n="solutions.healora.f2">Optimizes hospital operations</li>
+              <li data-i18n="solutions.healora.f3">Reduces waiting time and improves efficiency</li>
             </ul>
           </article>
         </div>
@@ -147,21 +152,21 @@
     <section id="impact" class="section section-alt">
       <div class="container reveal">
         <div class="section-head">
-          <p class="eyebrow">Our Impact</p>
-          <h2>Results That Support Better Healthcare</h2>
+          <p class="eyebrow" data-i18n="impact.eyebrow">Our Impact</p>
+          <h2 data-i18n="impact.title">Results That Support Better Healthcare</h2>
         </div>
         <div class="cards cards-3">
           <article class="card stat-card">
             <h3>50%</h3>
-            <p>Reduction in complications</p>
+            <p data-i18n="impact.c1">Reduction in complications</p>
           </article>
           <article class="card stat-card">
             <h3>30%</h3>
-            <p>Improvement in efficiency</p>
+            <p data-i18n="impact.c2">Improvement in efficiency</p>
           </article>
           <article class="card stat-card">
-            <h3>Vision 2030</h3>
-            <p>Aligned with Saudi healthcare transformation goals</p>
+            <h3 data-i18n="impact.c3Title">Vision 2030</h3>
+            <p data-i18n="impact.c3Text">Aligned with Saudi healthcare transformation goals</p>
           </article>
         </div>
       </div>
@@ -170,25 +175,25 @@
     <section id="services" class="section">
       <div class="container reveal">
         <div class="section-head">
-          <p class="eyebrow">Our Services</p>
-          <h2>Corporate Healthcare Technology Services</h2>
+          <p class="eyebrow" data-i18n="services.eyebrow">Our Services</p>
+          <h2 data-i18n="services.title">Corporate Healthcare Technology Services</h2>
         </div>
         <div class="cards cards-2 services-grid">
-          <article class="card service-card selectable-service" data-service="Healthcare Consulting" tabindex="0">
-            <h3>Healthcare Consulting</h3>
-            <p>Strategic guidance for digital health transformation and quality improvement.</p>
+          <article class="card service-card selectable-service" data-service="consulting" tabindex="0">
+            <h3 data-i18n="services.cards.consulting.title">Healthcare Consulting</h3>
+            <p data-i18n="services.cards.consulting.text">Strategic guidance for digital health transformation and quality improvement.</p>
           </article>
-          <article class="card service-card selectable-service" data-service="AI Healthcare Solutions" tabindex="0">
-            <h3>AI Healthcare Solutions</h3>
-            <p>Data-driven tools that support diagnosis, prioritization, and clinical decisions.</p>
+          <article class="card service-card selectable-service" data-service="ai" tabindex="0">
+            <h3 data-i18n="services.cards.ai.title">AI Healthcare Solutions</h3>
+            <p data-i18n="services.cards.ai.text">Data-driven tools that support diagnosis, prioritization, and clinical decisions.</p>
           </article>
-          <article class="card service-card selectable-service" data-service="Preventive Care Programs" tabindex="0">
-            <h3>Preventive Care Programs</h3>
-            <p>Proactive care frameworks designed to reduce risk and improve patient outcomes.</p>
+          <article class="card service-card selectable-service" data-service="preventive" tabindex="0">
+            <h3 data-i18n="services.cards.preventive.title">Preventive Care Programs</h3>
+            <p data-i18n="services.cards.preventive.text">Proactive care frameworks designed to reduce risk and improve patient outcomes.</p>
           </article>
-          <article class="card service-card selectable-service" data-service="Hospital Optimization Systems" tabindex="0">
-            <h3>Hospital Optimization Systems</h3>
-            <p>Operational systems that optimize flow, improve capacity, and reduce wait times.</p>
+          <article class="card service-card selectable-service" data-service="hospital" tabindex="0">
+            <h3 data-i18n="services.cards.hospital.title">Hospital Optimization Systems</h3>
+            <p data-i18n="services.cards.hospital.text">Operational systems that optimize flow, improve capacity, and reduce wait times.</p>
           </article>
         </div>
       </div>
@@ -197,9 +202,9 @@
     <section id="booking" class="section section-alt">
       <div class="container booking-wrap reveal">
         <div>
-          <p class="eyebrow">Meeting Booking</p>
-          <h2>Schedule a Service Meeting</h2>
-          <p class="muted">
+          <p class="eyebrow" data-i18n="booking.eyebrow">Meeting Booking</p>
+          <h2 data-i18n="booking.title">Schedule a Service Meeting</h2>
+          <p class="muted" data-i18n="booking.description">
             Communication is handled exclusively through scheduled meetings. Select a service,
             choose an available date and time, then confirm your booking.
           </p>
@@ -207,25 +212,25 @@
         <div class="booking-card">
           <form id="bookingForm" class="contact-form">
             <label>
-              Select Service
+              <span data-i18n="booking.selectService">Select Service</span>
               <select name="bookingService" id="bookingService" required>
-                <option value="">Choose a service</option>
-                <option>Healthcare Consulting</option>
-                <option>AI Healthcare Solutions</option>
-                <option>Preventive Care Programs</option>
-                <option>Hospital Optimization Systems</option>
+                <option value="" data-i18n="booking.chooseService">Choose a service</option>
+                <option value="consulting" data-i18n="services.cards.consulting.title">Healthcare Consulting</option>
+                <option value="ai" data-i18n="services.cards.ai.title">AI Healthcare Solutions</option>
+                <option value="preventive" data-i18n="services.cards.preventive.title">Preventive Care Programs</option>
+                <option value="hospital" data-i18n="services.cards.hospital.title">Hospital Optimization Systems</option>
               </select>
             </label>
             <label>
-              Select Date
+              <span data-i18n="booking.selectDate">Select Date</span>
               <input type="date" id="bookingDate" name="bookingDate" required />
             </label>
             <fieldset class="time-slots">
-              <legend>Select Time</legend>
+              <legend data-i18n="booking.selectTime">Select Time</legend>
               <div id="timeSlots" class="time-slots-grid"></div>
             </fieldset>
             <input type="hidden" id="bookingTime" name="bookingTime" required />
-            <button type="submit" class="btn">Confirm Booking</button>
+            <button type="submit" class="btn" data-i18n="booking.confirm">Confirm Booking</button>
             <p id="bookingMessage" class="form-message" aria-live="polite"></p>
           </form>
         </div>
@@ -235,35 +240,35 @@
     <section id="contact" class="section">
       <div class="container contact-grid reveal">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s Build Better Healthcare Together</h2>
-          <p class="muted">Email: Support@preventechsa.com</p>
-          <p class="muted">Phone: +966 53 200 5645</p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 data-i18n="contact.title">Let’s Build Better Healthcare Together</h2>
+          <p class="muted"><span data-i18n="contact.emailLabel">Email</span>: Support@preventechsa.com</p>
+          <p class="muted"><span data-i18n="contact.phoneLabel">Phone</span>: +966 53 200 5645</p>
         </div>
         <form class="contact-form contact-card" id="contactForm">
           <label>
-            Name
+            <span data-i18n="contact.form.name">Name</span>
             <input type="text" name="name" required />
           </label>
           <label>
-            Email
+            <span data-i18n="contact.form.email">Email</span>
             <input type="email" name="email" required />
           </label>
           <label>
-            Service
+            <span data-i18n="contact.form.service">Service</span>
             <select name="service" required>
-              <option value="">Choose a service</option>
-              <option>Healthcare Consulting</option>
-              <option>AI Healthcare Solutions</option>
-              <option>Preventive Care Programs</option>
-              <option>Hospital Optimization Systems</option>
+              <option value="" data-i18n="booking.chooseService">Choose a service</option>
+              <option value="consulting" data-i18n="services.cards.consulting.title">Healthcare Consulting</option>
+              <option value="ai" data-i18n="services.cards.ai.title">AI Healthcare Solutions</option>
+              <option value="preventive" data-i18n="services.cards.preventive.title">Preventive Care Programs</option>
+              <option value="hospital" data-i18n="services.cards.hospital.title">Hospital Optimization Systems</option>
             </select>
           </label>
           <label>
-            Message
+            <span data-i18n="contact.form.message">Message</span>
             <textarea name="message" rows="4" required></textarea>
           </label>
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn" data-i18n="contact.form.submit">Send Message</button>
           <p id="contactMessage" class="form-message" aria-live="polite"></p>
         </form>
       </div>
@@ -277,13 +282,13 @@
           <span class="logo-mark">P</span>
           <span>PrevenTech</span>
         </a>
-        <p class="muted">Together Towards Better Healthcare</p>
+        <p class="muted" data-i18n="footer.tagline">Together Towards Better Healthcare</p>
       </div>
       <ul class="footer-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#solutions" data-i18n="nav.solutions">Solutions</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="socials" aria-label="Social links">
         <a href="#" aria-label="LinkedIn">in</a>
@@ -291,7 +296,9 @@
         <a href="#" aria-label="Instagram">ig</a>
       </div>
     </div>
-    <p class="copyright">&copy; <span id="year"></span> PrevenTech. All rights reserved.</p>
+    <p class="copyright">
+      &copy; <span id="year"></span> <span data-i18n="footer.rights">PrevenTech. All rights reserved.</span>
+    </p>
   </footer>
 
   <script src="script.js"></script>

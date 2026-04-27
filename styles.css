@@ -16,13 +16,23 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Canga";
+  src:
+    url("assets/fonts/Canga.woff2") format("woff2"),
+    url("assets/fonts/Canga.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Canga", "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -108,6 +118,26 @@ p {
   border-radius: 0.65rem;
   padding: 0.45rem 0.7rem;
   font-weight: 600;
+}
+
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lang-toggle {
+  border: 1px solid rgba(151, 80, 255, 0.25);
+  background: rgba(151, 80, 255, 0.06);
+  border-radius: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  font-weight: 800;
+  color: #4f3f88;
+  cursor: pointer;
+}
+
+.lang-toggle:hover {
+  background: rgba(151, 80, 255, 0.12);
 }
 
 .nav-links {
@@ -460,6 +490,36 @@ textarea:focus {
   transform: translateY(0);
 }
 
+html[dir="rtl"] body {
+  letter-spacing: 0;
+}
+
+html[dir="rtl"] .nav-wrap {
+  direction: rtl;
+}
+
+html[dir="rtl"] .logo {
+  direction: ltr;
+}
+
+html[dir="rtl"] .hero-actions {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .hero-panel li {
+  direction: rtl;
+}
+
+html[dir="rtl"] .feature-list li {
+  padding-left: 0;
+  padding-right: 1.2rem;
+}
+
+html[dir="rtl"] .feature-list li::before {
+  left: auto;
+  right: 0;
+}
+
 @media (max-width: 860px) {
   .hero-grid,
   .booking-wrap,
@@ -488,5 +548,14 @@ textarea:focus {
   .nav-links {
     padding: 0.5rem 0 0.85rem;
     flex-wrap: wrap;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
+  html[dir="rtl"] .header-actions {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
