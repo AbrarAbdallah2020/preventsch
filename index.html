@@ -8,18 +8,37 @@
     content="PrevenTech is a Saudi-based health technology company delivering preventive healthcare innovation, AI-powered medical solutions, and smart hospital systems."
   />
   <title data-i18n="meta.title">PrevenTech | Smarter Healthcare Solutions</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260429-0028" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="logo" href="#home" aria-label="PrevenTech home">
-        <span class="logo-mark">P</span>
-        <span>PrevenTech</span>
+        <img
+          class="logo-mark-image"
+          src="assets/logo-light.png"
+          data-light-logo="assets/logo-light.png"
+          data-dark-logo="assets/logo-dark.png"
+          alt="PrevenTech logo"
+        />
       </a>
       <div class="header-actions">
-        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
-          العربية
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language" title="Switch language">
+          <svg class="icon lang-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3a13 13 0 0 1 0 18"></path>
+            <path d="M12 3a13 13 0 0 0 0 18"></path>
+          </svg>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Dark mode">
+          <svg class="icon theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 1 0 9.8 9.8Z"></path>
+          </svg>
+          <svg class="icon theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2.2M12 19.8V22M22 12h-2.2M4.2 12H2M19.1 4.9l-1.5 1.5M6.4 17.6l-1.5 1.5M19.1 19.1l-1.5-1.5M6.4 6.4 4.9 4.9"></path>
+          </svg>
         </button>
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
           <span data-i18n="nav.menu">Menu</span>
@@ -122,7 +141,7 @@
         </div>
         <div class="cards cards-2">
           <article class="card product-card mointak">
-            <h3 data-i18n="solutions.mointak.title">🟢 Mointak (معينتك)</h3>
+            <h3 data-i18n="solutions.mointak.title">Mo'eentech (معينتك)</h3>
             <p class="muted" data-i18n="solutions.mointak.subtitle">AI-powered diabetic foot care system</p>
             <ul class="feature-list">
               <li data-i18n="solutions.mointak.f1">Uses image analysis to detect risks early</li>
@@ -131,7 +150,7 @@
             </ul>
           </article>
           <article class="card product-card healora">
-            <h3>🟣 Healora</h3>
+            <h3>Healora</h3>
             <p class="muted" data-i18n="solutions.healora.subtitle">AI-powered hospital analytics platform</p>
             <ul class="feature-list">
               <li data-i18n="solutions.healora.f1">Predicts patient flow and discharge timing</li>
@@ -273,8 +292,13 @@
     <div class="container footer-wrap">
       <div>
         <a class="logo footer-logo" href="#home">
-          <span class="logo-mark">P</span>
-          <span>PrevenTech</span>
+          <img
+            class="logo-mark-image"
+            src="assets/logo-light.png"
+            data-light-logo="assets/logo-light.png"
+            data-dark-logo="assets/logo-dark.png"
+            alt="PrevenTech logo"
+          />
         </a>
         <p class="muted" data-i18n="footer.tagline">Together Towards Better Healthcare</p>
       </div>

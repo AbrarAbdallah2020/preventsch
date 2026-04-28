@@ -2,6 +2,8 @@ const yearEl = document.getElementById("year");
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 const langToggle = document.getElementById("langToggle");
+const themeToggle = document.getElementById("themeToggle");
+const logoMarks = document.querySelectorAll(".logo-mark-image");
 const bookingForm = document.getElementById("bookingForm");
 const bookingService = document.getElementById("bookingService");
 const bookingDate = document.getElementById("bookingDate");
@@ -14,6 +16,7 @@ const serviceCards = document.querySelectorAll(".selectable-service");
 
 const availableTimes = ["09:00 AM", "10:30 AM", "12:00 PM", "02:00 PM", "03:30 PM", "05:00 PM"];
 const LANG_KEY = "preventech_lang";
+const THEME_KEY = "preventech_theme";
 
 const translations = {
   en: {
@@ -63,7 +66,7 @@ const translations = {
     "why.cards.scalable": "Scalable and sustainable solutions",
     "solutions.eyebrow": "Our Solutions",
     "solutions.title": "Products Built Inside PrevenTech",
-    "solutions.mointak.title": "🟢 Mointak (معينتك)",
+    "solutions.mointak.title": "Mo'eentech (معينتك)",
     "solutions.mointak.subtitle": "AI-powered diabetic foot care system",
     "solutions.mointak.f1": "Uses image analysis to detect risks early",
     "solutions.mointak.f2": "Prioritizes patients based on severity",
@@ -243,7 +246,34 @@ function applyTranslations(lang) {
   document.title = t("meta.title", lang);
 
   if (langToggle) {
-    langToggle.textContent = lang === "ar" ? "English" : "العربية";
+    const nextLang = lang === "ar" ? "English" : "العربية";
+    langToggle.setAttribute("aria-label", `Switch language to ${nextLang}`);
+    langToggle.setAttribute("title", nextLang);
+  }
+}
+
+function getTheme() {
+  const fromStorage = localStorage.getItem(THEME_KEY);
+  if (fromStorage === "light" || fromStorage === "dark") {
+    return fromStorage;
+  }
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  logoMarks.forEach((logo) => {
+    const lightLogo = logo.getAttribute("data-light-logo");
+    const darkLogo = logo.getAttribute("data-dark-logo");
+    const nextLogo = theme === "dark" ? darkLogo : lightLogo;
+    if (nextLogo) {
+      logo.setAttribute("src", nextLogo);
+    }
+  });
+  if (themeToggle) {
+    const nextMode = theme === "dark" ? "light" : "dark";
+    themeToggle.setAttribute("aria-label", `Switch to ${nextMode} mode`);
+    themeToggle.setAttribute("title", `${nextMode[0].toUpperCase()}${nextMode.slice(1)} mode`);
   }
 }
 
@@ -264,6 +294,8 @@ if (yearEl) {
 
 let currentLang = getLang();
 applyTranslations(currentLang);
+let currentTheme = getTheme();
+applyTheme(currentTheme);
 
 if (langToggle) {
   langToggle.addEventListener("click", () => {
@@ -272,6 +304,14 @@ if (langToggle) {
     applyTranslations(currentLang);
     if (bookingMessage) bookingMessage.textContent = "";
     if (contactMessage) contactMessage.textContent = "";
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    currentTheme = currentTheme === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, currentTheme);
+    applyTheme(currentTheme);
   });
 }
 
